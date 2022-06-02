@@ -31,5 +31,5 @@ class NotebookApplicationTests {
 
 		assertNotNull(response);
 	}
-	
+
 }

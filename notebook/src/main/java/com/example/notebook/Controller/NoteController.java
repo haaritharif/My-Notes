@@ -27,11 +27,11 @@ public class NoteController {
         // make SOAP external client call
         messageClient.saveMessage(noteRequest.getMessage());
 
-        // this will be Mono return type so that it's asynchronous
         // Make call to Model layer to store in database
 
         var savedEntity = repository.save(noteRequest);
 
+        // this will be Mono return type so that it's asynchronous
         return savedEntity.map(Note::getId);
     }
 
